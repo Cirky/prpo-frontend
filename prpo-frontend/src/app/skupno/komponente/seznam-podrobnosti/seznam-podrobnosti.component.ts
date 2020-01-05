@@ -22,9 +22,9 @@ export class SeznamPodrobnostiComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.route.params.pipe(
-        switchMap((params: Params) => this.seznamiService.getSeznam(+params["id"])))
-        .subscribe(seznam => this.seznam = seznam);
+    this.route.params
+      .pipe(switchMap((params: Params) => this.seznamiService.getSeznam(+params["id"])))
+      .subscribe(seznam => this.seznam = seznam);
   }
   dodajArtikel(): void {
     this.router.navigate(["seznami/" + this.seznam.id + "/dodaj"]);
