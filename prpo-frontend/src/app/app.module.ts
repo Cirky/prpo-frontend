@@ -6,10 +6,8 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
-import {UporabnikiComponent} from './uporabnik/uporabniki.component';
-import {UporabnikiDodajComponent} from './uporabnik/uporabniki-dodaj.component';
-import {UporabnikPodrobnostiComponent} from './uporabnik/uporabnik-podrobnosti.component';
-import {UporabnikService} from './uporabnik/services/uporabnik.service';
+import { SeznamPodrobnostiComponent } from './skupno/komponente/seznam-podrobnosti/seznam-podrobnosti.component';
+
 
 
 @NgModule({
@@ -21,11 +19,8 @@ import {UporabnikService} from './uporabnik/services/uporabnik.service';
     ],
     declarations: [
         AppComponent,
-        UporabnikiComponent,
-        UporabnikPodrobnostiComponent,
-        UporabnikiDodajComponent
+        SeznamPodrobnostiComponent
     ],
-    providers: [UporabnikService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

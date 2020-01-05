@@ -1,0 +1,11 @@
+<div *ngIf="seznam">
+    <h2>{{seznam.naziv}}</h2>
+    <p>{{seznam.opis}}</p>
+
+    <ul *ngFor="let artikel of seznam.artikli">
+        <li><b>{{artikel.naziv}}</b><span *ngIf="artikel.opis">{{artikel.opis}}</span></li>
+    </ul>
+    <br>
+    <button type="button" (click)="dodajArtikel()">Dodaj artikel</button>
+    <button type="button" (click)="nazaj()">Nazaj</button>
+</div>>
