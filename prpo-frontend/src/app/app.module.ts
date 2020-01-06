@@ -6,7 +6,9 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
-import { SeznamPodrobnostiComponent } from './skupno/komponente/seznam-podrobnosti/seznam-podrobnosti.component';
+import { DodajArtikelComponent } from "./skupno/komponente/dodaj-artikel/dodaj-artikel.component";
+import { NakupovalniSeznamiComponent } from "./skupno/komponente/nakupovalni-seznami/nakupovalni-seznami.component";
+import { SeznamPodrobnostiComponent } from "./skupno/komponente/seznam-podrobnosti/seznam-podrobnosti.component";
 
 
 
@@ -19,6 +21,8 @@ import { SeznamPodrobnostiComponent } from './skupno/komponente/seznam-podrobnos
     ],
     declarations: [
         AppComponent,
+        DodajArtikelComponent,
+        NakupovalniSeznamiComponent,
         SeznamPodrobnostiComponent
     ],
     bootstrap: [AppComponent]
