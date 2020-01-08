@@ -16,7 +16,10 @@ export class NakupovalniSeznamiComponent implements OnInit {
   getSeznami(): void {
     this.seznamiService
       .getSeznami()
-      .subscribe(seznami => this.seznami = seznami);
+      .subscribe(seznami => {
+        this.seznami = seznami;
+        console.log(seznami);
+      });
   }
 
   delete(seznam: NakupovalniSeznam): void {

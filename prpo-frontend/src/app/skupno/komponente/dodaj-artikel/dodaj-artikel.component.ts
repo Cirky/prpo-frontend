@@ -21,7 +21,7 @@ export class DodajArtikelComponent implements OnInit {
 
   }
   public nazaj(): void {
-    this.router.navigate(["/seznami"]);
+    this.router.navigate(["/seznami/"+ this.seznamId]);
   }
 
   constructor(

@@ -2,7 +2,7 @@ import { Artikel } from './artikel';
 
 export class NakupovalniSeznam {
     id: number;
-    naziv: string;
+    naslov: string;
     opis: string;
     artikli: Artikel[];
 }
