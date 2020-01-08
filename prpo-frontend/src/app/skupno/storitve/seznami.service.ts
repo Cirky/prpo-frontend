@@ -28,7 +28,7 @@ export class SeznamiService {
 
   public dodajArtikel(artikel: DodajanjeArtiklaDTO): Observable<Artikel> {
     const url = `${this.url}/nakupovalni_seznami/dodajArtikle`;
-    return this.http.post<Artikel>(url, JSON).pipe(catchError(this.handleError));
+    return this.http.put<Artikel>(url, artikel).pipe(catchError(this.handleError));
 
   }
   public delete(id: number): Observable<number> {

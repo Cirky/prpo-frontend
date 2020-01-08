@@ -30,6 +30,6 @@ export class SeznamPodrobnostiComponent implements OnInit {
     this.router.navigate(["seznami/" + this.seznam.id + "/dodaj"]);
   }
   nazaj(): void {
-    this.location.back();
+    this.router.navigate(["seznami"]);
   }
 }
