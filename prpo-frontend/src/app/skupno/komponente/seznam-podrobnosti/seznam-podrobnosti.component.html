@@ -1,11 +1,22 @@
 <div *ngIf="seznam">
-    <h2>{{seznam.naziv}}</h2>
-    <p>{{seznam.opis}}</p>
-
-    <ul *ngFor="let artikel of seznam.artikli">
-        <li><b>{{artikel.naziv}}</b>    {{artikel.cena}}<span *ngIf="artikel.opis">{{artikel.opis}}</span></li>
-    </ul>
-    <br>
-    <button type="button" (click)="dodajArtikel()">Dodaj artikel</button>
-    <button type="button" (click)="nazaj()">Nazaj</button>
+    <div class="container"> 
+        <h2>{{seznam.naziv}}</h2>
+        <h3>{{seznam.opis}}</h3>
+        <table>
+            <tr>
+                <th>Naziv</th>
+                <th>Cena</th>
+                <th>Opis</th>
+            </tr>
+            <tr *ngFor="let artikel of seznam.artikli">
+                <td><b>{{artikel.naziv}}</b></td>
+                <td><b>{{artikel.cena}}</b></td>
+                <td><b>{{artikel.opis}}</b></td>
+            </tr>
+        </table>
+        <p>Skupna cena artiklov na seznamu: {{skupnaCena}} eur</p>
+        <br>
+        <button type="button" (click)="dodajArtikel()">Dodaj artikel</button>
+        <button type="button" (click)="nazaj()">Nazaj</button>
+    </div>
 </div>
